@@ -2,12 +2,19 @@
 // Child components
 function Greeting(props) {
 
-  console.log(props);  
+    const user = {
+    name: 'Nathira',
+    email: 'nathira@gmail.com',
+    place: 'Mayiladuthurai',
+  };
+
+  props.childToParent(user);
+
   return (
     <>
-      <h1>Hello, {props.loggedInUser.name}!</h1>
-      <p>you are logged in using {props.loggedInUser.email}</p>
-      <p>you are logged from {props.loggedInUser.place}</p>
+      <h1>Hello, {user.name}!</h1>
+      <p>you are logged in using {user.email}</p>
+      <p>you are logged from {user.place}</p>
     </>
   );
 }

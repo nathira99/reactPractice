@@ -4,15 +4,15 @@ import Greeting from "./components/Greetings";
 // Parent component
 function App() {
 
-  const user = {
-    name: 'Nathira',
-    email: 'nathira@gmail.com',
-    place: 'Mayiladuthurai',
-  };
+  function childToParent(user){
+    console.log(user);
+  }
 
   return (
     <>
-      <Greeting loggedInUser={user} />
+      <Greeting 
+        childToParent={childToParent}
+      />
     </>
   );
 }
