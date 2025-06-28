@@ -1,11 +1,5 @@
-function Greeting() {
-  return (
-    <>
-      <h1>Hello, World!</h1>
-      <p>This is my first component</p>
-    </>
-  );
-}
+import Greeting from "./components/Greetings";
+
 
 function App() {
   return (
