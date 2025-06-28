@@ -1,14 +1,13 @@
-function Greeting() {
 
-    let num1 = 5, num2 = 3;
+// Child components
+function Greeting(props) {
 
-    let add = () => num1 + num2;
-
+  console.log(props);  
   return (
     <>
-      <h1>Hello, World!</h1>
-      <p>This is my first component</p>
-      <p>The sum of {num1} and {num2} is {add()}</p>
+      <h1>Hello, {props.loggedInUser.name}!</h1>
+      <p>you are logged in using {props.loggedInUser.email}</p>
+      <p>you are logged from {props.loggedInUser.place}</p>
     </>
   );
 }
